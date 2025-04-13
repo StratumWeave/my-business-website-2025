@@ -1,31 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        form {
-            margin: 20px;
-        }
-        input, textarea {
-            margin: 10px;
-            width: 200px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Contact Us</h1>
-    <form method="POST">
-        <label>Name:</label><br>
-        <input type="text" name="name"><br>
-        <label>Message:</label><br>
-        <textarea name="message"></textarea><br>
-        <input type="submit" value="Send">
-    </form>
-    <p><a href="/">Back to Home</a></p>
-</body>
-</html>
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>Contact Us</title> 
+</head> 
+<body> 
+    <h1>Contact Us</h1> 
+    <form method="post"> 
+        <button type="submit">Send</button> 
+    </form> 
+    {% if confirmation %} 
+    <p>{{ confirmation }}</p> 
+    {% endif %} 
+    <a href="{{ url_for('index') }}">Back to Home</a> 
+</body> 
+</html> 
